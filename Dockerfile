@@ -1,4 +1,4 @@
-FROM alpine:3.9.6
+FROM alpine:3.21.3
 
 # Update the package list and install necessary dependencies
 RUN apk update && apk add --no-cache tcpdump iproute2 net-tools curl wget bind-tools mtr httpie
