@@ -21,4 +21,12 @@ RUN rm kubectl.sha256
 # Verify the installation
 RUN kubectl version --client
 
-CMD ["/bin/sh"]
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Set the entrypoint script
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
+# Default command: Start container in sleep mode for 6 hours
+# This command will be passed as arguments to the ENTRYPOINT script
+CMD ["sleep", "6h"]
