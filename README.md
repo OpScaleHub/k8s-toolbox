@@ -13,9 +13,7 @@ This is the most straightforward way to get an interactive shell inside the `k8s
 1.  **Run the container interactively:**
 
     ```bash
-    kubectl run k8s-toolbox --rm -it \
-      --image=ghcr.io/opscalehub/k8s-toolbox:main \
-      -- sh
+    kubectl run k8s-toolbox --rm -it --image=ghcr.io/opscalehub/k8s-toolbox:main -- sh
     ```
 
     *   `kubectl run k8s-toolbox`: Creates a temporary pod named `k8s-toolbox`.
